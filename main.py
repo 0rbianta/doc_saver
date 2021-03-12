@@ -17,7 +17,7 @@ def check_and_save():
 	for file in list_files():
 		if(file == get_file_name):	continue
 		for save_d in global_lens:
-			if((file == save_d.file) and (save_d.len>0)):
+			if(file == save_d.file):
 				if(save_d.len != os.path.getsize(file)):
 					print("SAVED: "+str(datetime.datetime.now()))
 					cas(file)
